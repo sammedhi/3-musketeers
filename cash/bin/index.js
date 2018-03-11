@@ -9,7 +9,12 @@ const config = new Conf();
 const argv = process.argv.slice(2);
 
 helpers(argv);
-
+/*
+The input command 
+The amount to convert
+The original kind of money
+The final kind of money 
+*/
 const command = {
   'amount': argv[0] || 1,
   'from': argv[1] || config.get('defaultFrom', 'USD'),

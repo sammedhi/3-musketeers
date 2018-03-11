@@ -7,6 +7,15 @@ const currencies = require('../lib/currencies.json');
 
 const API = 'https://api.fixer.io/latest';
 
+/*
+* The main function converting a money amount from one type to another and showing the
+* request result at the user
+* @param {double} amount - the original amount
+* @param {string} to - the target type of money
+* @param {string} from - the original amount
+* @param {object} response - the call to the API which contain the data about currencies
+* @param {object} loading - the loading object from the ora library , showing to the user the current state of the application 
+*/
 const convert = configuration => {
   const {amount, to, from, response, loading} = configuration;
 
